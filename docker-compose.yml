@@ -4,7 +4,7 @@ services:
   traefik:
     container_name: ${POD_NAME}
     hostname:  ${POD_HOSTNAME}
-    image: traefik
+    image: ${POD_IMAGE}
     restart: always
     ports:
       - 80:80
