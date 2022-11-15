@@ -4,7 +4,7 @@ WORKDIR /usr/local/bin/
 
 RUN \
     ## install htpasswd
-    apk add --no-cache openssl ca-certificates apache2-utils;\
+    apk add --no-cache openssl ca-certificates apache2-utils; \
     ## init plugin dir
     mkdir -p /usr/local/bin/plugins-local/src/github.com/; \
     ## traefik-auth
