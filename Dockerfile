@@ -2,8 +2,9 @@ FROM traefik:v2.9.4
 
 WORKDIR /usr/local/bin/
 
-
 RUN \
+    ## install htpasswd
+    apk add --no-cache openssl ca-certificates apache2-utils;\
     ## init plugin dir
     mkdir -p /usr/local/bin/plugins-local/src/github.com/; \
     ## traefik-auth
@@ -20,4 +21,3 @@ RUN \
     tar zxf /tmp/traefik-real-ip.tar.gz --strip-components=1 -C /usr/local/bin/plugins-local/src/github.com/soulbalz/traefik-real-ip; \
     ## clean.
     rm -rf /tmp/*
-
