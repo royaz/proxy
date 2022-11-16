@@ -16,8 +16,8 @@ RUN \
     mkdir -p /usr/local/bin/plugins-local/src/github.com/tomMoulard/fail2ban; \
     tar zxf /tmp/fail2ban.tar.gz --strip-components=1 -C /usr/local/bin/plugins-local/src/github.com/tomMoulard/fail2ban; \
     ## traefik-real-ip
-    wget -qO "/tmp/traefik-real-ip.tar.gz" https://github.com/Paxxs/traefik-get-real-ip/archive/refs/tags/v1.0.2.tar.gz; \
-    mkdir -p /usr/local/bin/plugins-local/src/github.com/Paxxs/traefik-get-real-ip; \
-    tar zxf /tmp/traefik-real-ip.tar.gz --strip-components=1 -C /usr/local/bin/plugins-local/src/github.com/Paxxs/traefik-get-real-ip; \
+    wget -qO "/tmp/traefik-real-ip.tar.gz" https://github.com/zzci/traefik-real-ip/archive/refs/tags/v1.0.0.tar.gz; \
+    mkdir -p /usr/local/bin/plugins-local/src/github.com/zzci/traefik-real-ip; \
+    tar zxf /tmp/traefik-real-ip.tar.gz --strip-components=1 -C /usr/local/bin/plugins-local/src/github.com/zzci/traefik-real-ip; \
     ## clean.
     rm -rf /tmp/*
