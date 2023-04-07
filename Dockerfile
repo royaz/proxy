@@ -2,6 +2,8 @@ FROM traefik:v2.9.9
 
 WORKDIR /usr/local/bin/
 
+EXPOSE 80 443
+
 RUN \
     ## install htpasswd
     apk add --no-cache openssl ca-certificates apache2-utils; \
